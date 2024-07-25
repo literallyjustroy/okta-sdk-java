@@ -51,7 +51,7 @@ public final class OktaHttpRequestRetryStrategy extends DefaultHttpRequestRetryS
     public OktaHttpRequestRetryStrategy(int maxRetries) {
         this(maxRetries, Arrays.asList(InterruptedIOException.class,
                 UnknownHostException.class, ConnectException.class, ConnectionClosedException.class,
-                NoRouteToHostException.class, SSLException.class),
+                NoRouteToHostException.class, SSLException.class, NoHttpResponseException.class),
             Arrays.asList(429, 503, 504));
     }
 
